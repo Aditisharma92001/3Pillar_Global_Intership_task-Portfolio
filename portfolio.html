@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+  <h1>A&nbsp; s&nbsp; a&nbsp; b&nbsp; e&nbsp; n&nbsp; e&nbsp; h  &nbsp;&nbsp;  Y&nbsp; e&nbsp; t&nbsp; a&nbsp; y&nbsp; e&nbsp; h</h1>
+  
+
+  <div class="container" id="div1">
+    <img src="emoji/emoji1.png" id="img1" class="visible">
+    <img src="emoji/emoji2.png" id="img2" class="hidden">
+    <img src="emoji/emoji3.png" id="img3" class="hidden">
+    <img src="emoji/emoji4.png" id="img4" class="hidden">
+    <img src="emoji/emoji5.png" id="img5" class="hidden">
+     <span class="abc"></span>
+  </div>
+    
+    <div class="box">
+      
+        I am Asabeneh Yetayeh. I am Instructor, developer, motivator and content creator. I love educating
+        people and creating educational materials. In  January 2019, i also created a teaching material <b>Javascript for Everyone.</b>
+        In December 2019, I created <b>30 Days of Python</b> challenge and In January 2020 <b>30 Days of Javascript</b> challenge
+    </div>
+    
+  <div id="boxes" class="boxes">
+      <div id="leftbox" class="leftbox">
+        <b>JAVASCRIPT FOR EVERYONE</b>
+      </div>
+      
+      <div id="midbox" class="midbox">
+        <b>30DAYS OF PYTHON</b>
+      </div>
+      
+      <div id="rightbox" class="rightbox">
+        <b>30DAYS OF JAVASCRIPT</b>
+      </div>
+  </div>
+  
+ 
+  <div class="home" >
+    <div class="home-text">
+      <p style="margin-top:12px; font-weight: bold;">The technologies | teach</p>
+      <p class="animate-text">
+        <span style="color: green;">NODE</span>
+        <span style="color: purple;">JAVASCRIPT</span>
+        <span style="color: rgb(194, 73, 113)">PANDAS</span>
+        <span style="color: firebrick">NUMPY</span>
+        <span style="color: orange">PYTHON</span>
+        <span style="color: olivedrab;">MONGODB</span>
+        <span style="color: royalblue">HTML</span>
+        <span style="color: firebrick">REACT</span>
+        <span style="color: royalblue">REDUX</span>
+      </p>
+    </div>
+  </div>
+  
+  
+  <script>
+        var activeImgId = 1;
+        var nextImgId = 1;
+
+        setInterval(function(){
+          nextImgId = nextImgId+1;
+          if(nextImgId<5){
+            document.getElementById("img"+activeImgId).classList.replace("visible","hidden");
+            document.getElementById("img"+nextImgId).classList.replace("hidden","visible");
+            
+            activeImgId = nextImgId;
+          }
+          else{
+            document.getElementById("img"+activeImgId).classList.replace("visible","hidden");
+            document.getElementById("img"+nextImgId).classList.replace("hidden","visible");
+            activeImgId=5;
+            nextImgId=0;
+          }
+        },2000);
+
+
+        const texts=document.querySelector(".animate-text").children,
+              textsLen=texts.length;
+            let index=0;
+
+        function animateText(){
+          for(let i=0;i<textsLen;i++)
+          {
+            texts[i].classList.remove("text-in");
+          }
+          texts[index].classList.add("text-in");
+          if(index == textsLen-1){
+            index=0;
+          }
+          else{
+            index++;
+          }
+          setTimeout(animateText,3000)
+
+        }
+        window.onload=animateText;
+    </script>
+</body>
+</html>

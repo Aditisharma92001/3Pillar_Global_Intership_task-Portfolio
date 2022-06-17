@@ -1,0 +1,189 @@
+h1{
+    margin-left: 200px;
+    margin-top: 5%;
+    font-size: 40px;
+}
+.container{
+    background-color: rgb(235, 218, 235);
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-indent: 10px;
+    text-align: center;
+    font-size: larger;
+}
+.box{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 18px;
+    text-align: left;
+    font-size: large;
+    line-height:30px;
+    transition: 1s;
+    font-family:  'Times New Roman', serif;
+}
+b{
+    font-weight: bolder;
+}
+.leftbox {
+    float: left;
+    background-color: whitesmoke;
+    width: 120px;
+    height: 40px;
+    padding: 50px;
+    margin-left: 240px;
+    margin-top: 18px;
+    font-size: medium;
+    font-family:  'Times New Roman', serif;
+}
+.midbox{
+    float: left;
+    background-color: whitesmoke;
+    width: 120px;
+    height: 40px;
+    padding: 50px;
+    margin-left: 100px;
+    margin-top: 18px;
+    font-family:  'Times New Roman', serif;
+}
+.rightbox{
+    float: right;
+    background-color: whitesmoke;
+    width: 120px;
+    height: 40px;
+    padding: 50px;
+    margin-right: 240px;
+    margin-top: 18px;
+    font-family:  'Times New Roman', serif;
+}
+.leftbox:hover{
+    background-color: rgb(235, 218, 235);;
+    transform: scale(1.1);
+    z-index: 2;
+
+}
+
+.midbox:hover{
+    background-color:   rgb(235, 218, 235);;
+    transform: scale(1.1);
+    z-index: 2;
+
+}
+.rightbox:hover{
+    background-color:   rgb(235, 218, 235);;
+    transform: scale(1.1);
+    z-index: 2;
+
+}
+.visible{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+img{
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    margin-left: 1%;
+}
+p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: left;
+    align: justify;
+    text-indent: 10px;
+}
+
+.abc::before{
+    content: '';
+    animation: animate infinite 15s;
+}
+
+@keyframes animate {
+    0%{
+        content: 'Motivational speaker';
+        font-family:  'Times New Roman', serif;
+    }
+    20%{
+        content: 'Educator';
+        font-family:  'Times New Roman', serif;
+    }
+    40%{
+        content: 'Instructor';
+        font-family:  'Times New Roman', serif;
+    }
+    60%{
+        content: 'Programmer';
+        font-family:  'Times New Roman', serif;
+    }
+    80%{
+        content: 'Content Creator';
+        font-family:  'Times New Roman', serif;
+    }
+    100%{
+        content: 'Motivator';
+        font-family:  'Times New Roman', serif;
+    }
+    
+}
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    float:left;
+    margin-left: 200px;
+}
+
+.home::before{
+    content:'';
+    position: absolute;
+
+}
+
+.home .home-text{
+    text-align: left;
+    margin-top: 50px;
+    margin-right: 90px;
+    display: flex; 
+    justify-content: space-between;
+    float:left;
+    
+}
+
+.home .home-text p{
+    margin: 0;
+    display: inline;
+}
+
+.home .home-text p span{
+    margin: 0;
+    display: inline-block;
+    display: none;
+    text-align: left;
+    font-size: 30px;
+    margin-top: 200px;
+    font-weight: bolder;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+.home .home-text p span.text-in{
+    display: inline;
+    animation: textIn 0.1s ease;
+}
+
+@keyframes textIn{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+    
+}
+
+
+
+
